@@ -33,35 +33,37 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <form onSubmit={handleSubmit} className="login-form">
+    <div className="row">
+      <form onSubmit={handleSubmit} className="">
         <h2>Login</h2>
         
         {error && <div className="error-message">{error}</div>}
         
-        <div className="form-group">
-          <label>Email:</label>
+        <div className="form-outline mb-4">
+          <label class="form-label" for="form2Example1">Email ou Cpf</label>
           <input
             type="email"
             name="email"
             value={credentials.email}
             onChange={handleChange}
             required
+            className='form-control'
           />
         </div>
         
-        <div className="form-group">
-          <label>Password:</label>
+        <div className="form-outline mb-4">
+          <label class="form-label" for="form2Example2">Password</label>
           <input
             type="password"
             name="password"
             value={credentials.password}
             onChange={handleChange}
             required
+            className='form-control'
           />
         </div>
         
-        <button type="submit" disabled={isLoading}>
+        <button type="submit" className='btn btn-primary btn-block mb-4' disabled={isLoading}>
           {isLoading ? 'Logging in...' : 'Login'}
         </button>
       </form>

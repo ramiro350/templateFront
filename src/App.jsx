@@ -7,13 +7,17 @@ import UserList from './components/UserList';
 import UserForm from './components/UserForm';
 import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
+import Navbar from './components/Navbar';
+
 
 function App() {
   const [refreshTrigger, setRefreshTrigger] = useState(0);
 
   return (
     <Provider store={store}>
+    
       <Router>
+        <Navbar></Navbar>
         <div className="App">
           <Routes>
             <Route path="/login" element={<Login />} />

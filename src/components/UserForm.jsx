@@ -147,7 +147,7 @@ const UserForm = () => {
   if (isEdit && isLoading) return <div>Loading user data...</div>;
 
   return (
-    <div className="user-form">
+    <div className="container">
       <h2>{isEdit ? 'Edit User' : 'Create New User'}</h2>
       
       {error && (
@@ -156,8 +156,8 @@ const UserForm = () => {
         </div>
       )}
       
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
+      <form onSubmit={handleSubmit} className='row justify-content-center align-items-center'>
+        <div className="form-group col-md-6 col-sm-12">
           <label>Name: *</label>
           <input
             type="text"
@@ -169,7 +169,7 @@ const UserForm = () => {
           />
         </div>
         
-        <div className="form-group">
+        <div className="form-group col-md-6 col-sm-12">
           <label>Email:</label>
           <input
             type="email"
@@ -180,7 +180,7 @@ const UserForm = () => {
           />
         </div>
         
-        <div className="form-group">
+        <div className="form-group col-md-6 col-sm-12">
           <label>Password: {!isEdit && '*'}</label>
           <input
             type="password"
@@ -196,7 +196,7 @@ const UserForm = () => {
           )}
         </div>
         
-        <div className="form-group">
+        <div className="form-group col-md-6 col-sm-12">
           <label>CPF: *</label>
           <input
             type="text"
@@ -209,7 +209,7 @@ const UserForm = () => {
           />
         </div>
         
-        <div className="form-group">
+        <div className="form-group col-md-6 col-sm-12">
           <label>Nationality:</label>
           <input
             type="text"
@@ -221,7 +221,7 @@ const UserForm = () => {
           />
         </div>
         
-        <div className="form-group">
+        <div className="form-group col-md-6 col-sm-12">
           <label>Birthplace:</label>
           <input
             type="text"
@@ -233,7 +233,7 @@ const UserForm = () => {
           />
         </div>
         
-        <div className="form-group">
+        <div className="form-group col-md-6 col-sm-12">
           <label>Gender:</label>
           <select
             name="sexo"
@@ -247,7 +247,7 @@ const UserForm = () => {
           </select>
         </div>
         
-        <div className="form-group">
+        <div className="form-group col-md-6 col-sm-12">
           <label>Birth Date: *</label>
           <input
             type="date"
