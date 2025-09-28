@@ -33,7 +33,7 @@ const Login = () => {
   };
 
   return (
-    <div className="row">
+    <div className=" d-flex justify-content-center align-items-center mt-4">
       <form onSubmit={handleSubmit} className="">
         <h2>Login</h2>
         
